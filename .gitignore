@@ -1,0 +1,30 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ---- Node ----
+node_modules/
+dist/
+
+# ---- 密钥与环境配置 ----
+.env
+*.env.local
+
+# ---- Claude Code 本地设置 ----
+.claude/
+
+# ---- 系统文件 ----
+.DS_Store
+Thumbs.db
+
+# ---- 占位/模板文件(非项目内容) ----
+docs/新建 Microsoft Word 文档.docx
+images/新建 Microsoft Word 文档.docx
+docs/东南大学科研学术汇报模板.pptx
+docs/_26322000007207733461_东南大学.pdf
+
+# ---- 包含数据库密码的截图(脱敏后可手动恢复) ----
+images/微信图片_20261013223101_158_35.jpg
+images/微信图片_20261013223243_166_35.jpg

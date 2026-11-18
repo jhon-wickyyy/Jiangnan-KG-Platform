@@ -1,0 +1,838 @@
+{
+ "databases": [
+  {
+   "name": "geyuan1.0",
+   "garden": "个园",
+   "nodes": 18,
+   "rels": 49
+  },
+  {
+   "name": "lejiaoyuan",
+   "garden": "乐郊园",
+   "nodes": 34,
+   "rels": 96
+  },
+  {
+   "name": "qiaoyuan",
+   "garden": "乔园",
+   "nodes": 10,
+   "rels": 34
+  },
+  {
+   "name": "heyuan",
+   "garden": "何园",
+   "nodes": 19,
+   "rels": 59
+  },
+  {
+   "name": "qcoy",
+   "garden": "偶园（青州）",
+   "nodes": 17,
+   "rels": 50
+  },
+  {
+   "name": "nanxunxiaolianzhuang",
+   "garden": "南浔小莲庄",
+   "nodes": 42,
+   "rels": 86
+  },
+  {
+   "name": "qiyuan",
+   "garden": "启园",
+   "nodes": 76,
+   "rels": 130
+  },
+  {
+   "name": "wuyuan",
+   "garden": "寤园",
+   "nodes": 10,
+   "rels": 31
+  },
+  {
+   "name": "yingyuan",
+   "garden": "影园",
+   "nodes": 20,
+   "rels": 53
+  },
+  {
+   "name": "yiyuan",
+   "garden": "怡园",
+   "nodes": 38,
+   "rels": 105
+  },
+  {
+   "name": "zhuozhengyuan",
+   "garden": "拙政园",
+   "nodes": 20,
+   "rels": 53
+  },
+  {
+   "name": "canglangting",
+   "garden": "沧浪亭",
+   "nodes": 29,
+   "rels": 76
+  },
+  {
+   "name": "qingchuzhanyuan",
+   "garden": "清初瞻园",
+   "nodes": 17,
+   "rels": 46
+  },
+  {
+   "name": "shizilin",
+   "garden": "狮子林",
+   "nodes": 41,
+   "rels": 120
+  },
+  {
+   "name": "changyuan",
+   "garden": "畅园",
+   "nodes": 45,
+   "rels": 130
+  },
+  {
+   "name": "liuyuan",
+   "garden": "留园",
+   "nodes": 55,
+   "rels": 104
+  },
+  {
+   "name": "zy2.0",
+   "garden": "瞻园",
+   "nodes": 15,
+   "rels": 38
+  },
+  {
+   "name": "wsy2.0",
+   "garden": "网师园",
+   "nodes": 26,
+   "rels": 35
+  },
+  {
+   "name": "ouyuan",
+   "garden": "耦园",
+   "nodes": 36,
+   "rels": 126
+  },
+  {
+   "name": "yp2.0",
+   "garden": "艺圃",
+   "nodes": 36,
+   "rels": 186
+  },
+  {
+   "name": "jieziyuan",
+   "garden": "芥子园",
+   "nodes": 58,
+   "rels": 126
+  },
+  {
+   "name": "tuisiyuan",
+   "garden": "退思园",
+   "nodes": 19,
+   "rels": 64
+  },
+  {
+   "name": "guozhuang",
+   "garden": "郭庄",
+   "nodes": 37,
+   "rels": 108
+  }
+ ],
+ "total_nodes": 718,
+ "total_rels": 1905,
+ "by_label": [
+  {
+   "label": "建筑",
+   "count": 441
+  },
+  {
+   "label": "池沼",
+   "count": 111
+  },
+  {
+   "label": "花木",
+   "count": 78
+  },
+  {
+   "label": "山石",
+   "count": 75
+  },
+  {
+   "label": "实体",
+   "count": 74
+  },
+  {
+   "label": "园林要素",
+   "count": 46
+  },
+  {
+   "label": "园林",
+   "count": 12
+  },
+  {
+   "label": "区域",
+   "count": 1
+  }
+ ],
+ "by_rel_type": [
+  {
+   "type": "相邻",
+   "count": 809
+  },
+  {
+   "type": "相接",
+   "count": 794
+  },
+  {
+   "type": "属于",
+   "count": 267
+  },
+  {
+   "type": "连接",
+   "count": 35
+  }
+ ],
+ "routes": {
+  "geyuan1.0": {
+   "garden": "个园",
+   "stations": 9,
+   "total_m": 185.6,
+   "closed": true
+  },
+  "lejiaoyuan": {
+   "garden": "乐郊园",
+   "stations": 26,
+   "total_m": 734.9,
+   "closed": true
+  },
+  "qiaoyuan": {
+   "garden": "乔园",
+   "stations": 0,
+   "total_m": 0,
+   "closed": false
+  },
+  "heyuan": {
+   "garden": "何园",
+   "stations": 0,
+   "total_m": 0,
+   "closed": false
+  },
+  "qcoy": {
+   "garden": "偶园（青州）",
+   "stations": 0,
+   "total_m": 0,
+   "closed": false
+  },
+  "nanxunxiaolianzhuang": {
+   "garden": "南浔小莲庄",
+   "stations": 0,
+   "total_m": 0,
+   "closed": false
+  },
+  "qiyuan": {
+   "garden": "启园",
+   "stations": 0,
+   "total_m": 0,
+   "closed": false
+  },
+  "wuyuan": {
+   "garden": "寤园",
+   "stations": 8,
+   "total_m": 0,
+   "closed": true
+  },
+  "yingyuan": {
+   "garden": "影园",
+   "stations": 13,
+   "total_m": 0,
+   "closed": true
+  },
+  "yiyuan": {
+   "garden": "怡园",
+   "stations": 0,
+   "total_m": 0,
+   "closed": false
+  },
+  "zhuozhengyuan": {
+   "garden": "拙政园",
+   "stations": 18,
+   "total_m": 0,
+   "closed": true
+  },
+  "canglangting": {
+   "garden": "沧浪亭",
+   "stations": 14,
+   "total_m": 487.7,
+   "closed": true
+  },
+  "qingchuzhanyuan": {
+   "garden": "清初瞻园",
+   "stations": 0,
+   "total_m": 0,
+   "closed": false
+  },
+  "shizilin": {
+   "garden": "狮子林",
+   "stations": 28,
+   "total_m": 770.8,
+   "closed": true
+  },
+  "changyuan": {
+   "garden": "畅园",
+   "stations": 0,
+   "total_m": 0,
+   "closed": false
+  },
+  "liuyuan": {
+   "garden": "留园",
+   "stations": 0,
+   "total_m": 0,
+   "closed": false
+  },
+  "zy2.0": {
+   "garden": "瞻园",
+   "stations": 0,
+   "total_m": 0,
+   "closed": false
+  },
+  "wsy2.0": {
+   "garden": "网师园",
+   "stations": 0,
+   "total_m": 0,
+   "closed": false
+  },
+  "ouyuan": {
+   "garden": "耦园",
+   "stations": 27,
+   "total_m": 425.0,
+   "closed": true
+  },
+  "yp2.0": {
+   "garden": "艺圃",
+   "stations": 0,
+   "total_m": 0,
+   "closed": false
+  },
+  "jieziyuan": {
+   "garden": "芥子园",
+   "stations": 0,
+   "total_m": 0,
+   "closed": false
+  },
+  "tuisiyuan": {
+   "garden": "退思园",
+   "stations": 10,
+   "total_m": 409.0,
+   "closed": true
+  },
+  "guozhuang": {
+   "garden": "郭庄",
+   "stations": 0,
+   "total_m": 0,
+   "closed": false
+  }
+ },
+ "canglangting_network": {
+  "total_nodes": 29,
+  "total_rels": 76,
+  "avg_degree": 4.07,
+  "max_degree_node": {
+   "id": "canglangting::园林::沧浪亭",
+   "db": "canglangting",
+   "label": "园林",
+   "name": "沧浪亭",
+   "props": {
+    "时期": "北宋始建，清代重修",
+    "位置": "江苏省苏州市姑苏区沧浪亭",
+    "代号": "园林-沧浪亭",
+    "编号": "沧浪亭"
+   },
+   "degree": 28
+  },
+  "top_nodes": [
+   {
+    "id": "canglangting::园林::沧浪亭",
+    "db": "canglangting",
+    "label": "园林",
+    "name": "沧浪亭",
+    "props": {
+     "时期": "北宋始建，清代重修",
+     "位置": "江苏省苏州市姑苏区沧浪亭",
+     "代号": "园林-沧浪亭",
+     "编号": "沧浪亭"
+    },
+    "degree": 28
+   },
+   {
+    "id": "canglangting::建筑::建筑2-3",
+    "db": "canglangting",
+    "label": "建筑",
+    "name": "明道堂",
+    "props": {
+     "极径_m": 74.2,
+     "屋顶形式": "硬山顶",
+     "功能": "园内主要厅堂空间",
+     "x": -37.8,
+     "名称": "明道堂",
+     "y": 63.9,
+     "极角_度": 121,
+     "编号": "建筑2-3",
+     "类型": "堂",
+     "平面形式": "三开间一进深"
+    },
+    "degree": 6
+   },
+   {
+    "id": "canglangting::建筑::建筑6-2",
+    "db": "canglangting",
+    "label": "建筑",
+    "name": "沧浪亭",
+    "props": {
+     "极径_m": 56.3,
+     "屋顶形式": "攒尖顶",
+     "功能": "园名主体亭，位于假山高处，作为登高观景核心",
+     "x": -43.9,
+     "名称": "沧浪亭",
+     "y": 35.3,
+     "极角_度": 141,
+     "编号": "建筑6-2",
+     "类型": "亭",
+     "平面形式": "方亭"
+    },
+    "degree": 6
+   },
+   {
+    "id": "canglangting::建筑::建筑4-1",
+    "db": "canglangting",
+    "label": "建筑",
+    "name": "翠玲珑",
+    "props": {
+     "极径_m": 88.9,
+     "屋顶形式": "硬山顶",
+     "功能": "以竹景为特色的清幽游赏空间",
+     "x": -1.2,
+     "名称": "翠玲珑",
+     "y": 88.9,
+     "极角_度": 91,
+     "编号": "建筑4-1",
+     "类型": "轩",
+     "平面形式": "曲折院落式"
+    },
+    "degree": 5
+   },
+   {
+    "id": "canglangting::建筑::建筑5-1",
+    "db": "canglangting",
+    "label": "建筑",
+    "name": "面水轩",
+    "props": {
+     "极径_m": 25.8,
+     "屋顶形式": "硬山顶",
+     "功能": "面向园南水面，形成临水观景节点",
+     "x": -25.2,
+     "名称": "面水轩",
+     "y": -5.3,
+     "极角_度": 192,
+     "编号": "建筑5-1",
+     "类型": "轩",
+     "平面形式": "临水轩"
+    },
+    "degree": 5
+   }
+  ],
+  "by_label": [
+   {
+    "label": "建筑",
+    "count": 14
+   },
+   {
+    "label": "花木",
+    "count": 8
+   },
+   {
+    "label": "山石",
+    "count": 3
+   },
+   {
+    "label": "池沼",
+    "count": 3
+   },
+   {
+    "label": "园林",
+    "count": 1
+   }
+  ],
+  "by_rel_type": [
+   {
+    "type": "相邻",
+    "count": 34
+   },
+   {
+    "type": "属于",
+    "count": 28
+   },
+   {
+    "type": "相接",
+    "count": 14
+   }
+  ]
+ },
+ "changyuan_network": {
+  "total_nodes": 45,
+  "total_rels": 130,
+  "avg_degree": 2.91,
+  "max_degree_node": {
+   "id": "changyuan::建筑::4:0f83c351-95fe-4b2a-a50a-6fbffbe45c4a:1",
+   "db": "changyuan",
+   "label": "建筑",
+   "name": "留云山房",
+   "props": {
+    "正朝向视线角度": "69.8°",
+    "极径_m": 30.06,
+    "plane_form": "矩形厅堂",
+    "正朝向视线范围": "±45°",
+    "roof_form": "硬山顶",
+    "正朝向": "北",
+    "名称": "留云山房",
+    "极角_°": 69.8,
+    "function": "主要建筑空间，用于会客、起居与观景",
+    "x": 10.4,
+    "y": 28.2,
+    "id": "建筑1-01",
+    "position": [
+     10.4,
+     28.2
+    ],
+    "类型": "堂"
+   },
+   "degree": 10
+  },
+  "top_nodes": [
+   {
+    "id": "changyuan::建筑::4:0f83c351-95fe-4b2a-a50a-6fbffbe45c4a:1",
+    "db": "changyuan",
+    "label": "建筑",
+    "name": "留云山房",
+    "props": {
+     "正朝向视线角度": "69.8°",
+     "极径_m": 30.06,
+     "plane_form": "矩形厅堂",
+     "正朝向视线范围": "±45°",
+     "roof_form": "硬山顶",
+     "正朝向": "北",
+     "名称": "留云山房",
+     "极角_°": 69.8,
+     "function": "主要建筑空间，用于会客、起居与观景",
+     "x": 10.4,
+     "y": 28.2,
+     "id": "建筑1-01",
+     "position": [
+      10.4,
+      28.2
+     ],
+     "类型": "堂"
+    },
+    "degree": 10
+   },
+   {
+    "id": "changyuan::建筑::4:0f83c351-95fe-4b2a-a50a-6fbffbe45c4a:7",
+    "db": "changyuan",
+    "label": "建筑",
+    "name": "涤我尘襟",
+    "props": {
+     "正朝向视线角度": "73.1°",
+     "极径_m": 15.47,
+     "plane_form": "开敞式轩",
+     "正朝向视线范围": "±45°",
+     "roof_form": "歇山顶",
+     "正朝向": "北",
+     "名称": "涤我尘襟",
+     "极角_°": 73.1,
+     "function": "临景休憩、赏景交流空间",
+     "x": 4.5,
+     "y": 14.8,
+     "id": "建筑4-02",
+     "position": [
+      4.5,
+      14.8
+     ],
+     "类型": "轩"
+    },
+    "degree": 10
+   },
+   {
+    "id": "changyuan::建筑::4:0f83c351-95fe-4b2a-a50a-6fbffbe45c4a:2",
+    "db": "changyuan",
+    "label": "建筑",
+    "name": "桐华书屋",
+    "props": {
+     "正朝向视线角度": "327.2°",
+     "极径_m": 17,
+     "plane_form": "矩形建筑",
+     "正朝向视线范围": "±45°",
+     "roof_form": "硬山顶",
+     "正朝向": "东南",
+     "名称": "桐华书屋",
+     "极角_°": 327.2,
+     "function": "藏书、读书与休憩空间",
+     "x": 14.3,
+     "y": -9.2,
+     "id": "建筑1-02",
+     "position": [
+      14.3,
+      -9.2
+     ],
+     "类型": "馆"
+    },
+    "degree": 8
+   },
+   {
+    "id": "changyuan::建筑::4:0f83c351-95fe-4b2a-a50a-6fbffbe45c4a:4",
+    "db": "changyuan",
+    "label": "建筑",
+    "name": "亭",
+    "props": {
+     "正朝向视线角度": "360°",
+     "极径_m": 4.83,
+     "plane_form": "独立亭式建筑",
+     "正朝向视线范围": 0,
+     "roof_form": "攒尖顶",
+     "正朝向": "东北",
+     "名称": "亭",
+     "极角_°": 62.9,
+     "function": "园中观景、停憩节点",
+     "x": 2.2,
+     "y": 4.3,
+     "id": "建筑3-01",
+     "position": [
+      2.2,
+      4.3
+     ],
+     "类型": "亭"
+    },
+    "degree": 8
+   },
+   {
+    "id": "changyuan::建筑::4:0f83c351-95fe-4b2a-a50a-6fbffbe45c4a:6",
+    "db": "changyuan",
+    "label": "建筑",
+    "name": "憩间",
+    "props": {
+     "正朝向视线角度": "46.9°",
+     "极径_m": 21.37,
+     "plane_form": "带状廊道",
+     "正朝向视线范围": "±45°",
+     "roof_form": "卷棚顶",
+     "正朝向": "东北",
+     "名称": "憩间",
+     "极角_°": 46.9,
+     "function": "联系园林空间，提供游线与遮蔽",
+     "x": 14.6,
+     "y": 15.6,
+     "id": "建筑4-01",
+     "position": [
+      14.6,
+      15.6
+     ],
+     "类型": "廊"
+    },
+    "degree": 8
+   }
+  ],
+  "by_label": [
+   {
+    "label": "建筑",
+    "count": 21
+   },
+   {
+    "label": "花木",
+    "count": 12
+   },
+   {
+    "label": "山石",
+    "count": 8
+   },
+   {
+    "label": "池沼",
+    "count": 4
+   }
+  ],
+  "by_rel_type": [
+   {
+    "type": "相邻",
+    "count": 86
+   },
+   {
+    "type": "相接",
+    "count": 44
+   }
+  ]
+ },
+ "canglangting_spatial": {
+  "nodes": 27,
+  "links": 48,
+  "by_type": {
+   "相邻": 34,
+   "相接": 14
+  }
+ },
+ "changyuan_spatial": {
+  "nodes": 42,
+  "links": 130,
+  "by_type": {
+   "相接": 44,
+   "相邻": 86
+  },
+  "adjacency_values": {
+   "路径": 13,
+   "可看": 72,
+   "None": 1
+  }
+ },
+ "path_example": {
+  "hops": null,
+  "total_m": null,
+  "desc": "沧浪亭假山 →相接(接触类型·在山上 距离_m·9.6) →沧浪亭 →相邻(相邻类型·可看 距离_m·63.9) →园南沧浪水 →相接(接触类型·临水 距离_m·23.2) →面水轩"
+ },
+ "route_gardens_closed": {
+  "count": 9,
+  "gardens": {
+   "shizilin": 28,
+   "ouyuan": 27,
+   "lejiaoyuan": 26,
+   "zhuozhengyuan": 18,
+   "canglangting": 14,
+   "yingyuan": 13,
+   "tuisiyuan": 10,
+   "geyuan1.0": 9,
+   "wuyuan": 8
+  },
+  "longest": [
+   "shizilin",
+   {
+    "garden": "狮子林",
+    "stations": 28,
+    "total_m": 770.8,
+    "closed": true
+   }
+  ]
+ },
+ "xy_coverage": {
+  "geyuan1.0": {
+   "garden": "个园",
+   "nodes": 18,
+   "with_xy": 17
+  },
+  "lejiaoyuan": {
+   "garden": "乐郊园",
+   "nodes": 34,
+   "with_xy": 33
+  },
+  "qiaoyuan": {
+   "garden": "乔园",
+   "nodes": 10,
+   "with_xy": 10
+  },
+  "heyuan": {
+   "garden": "何园",
+   "nodes": 19,
+   "with_xy": 19
+  },
+  "qcoy": {
+   "garden": "偶园（青州）",
+   "nodes": 17,
+   "with_xy": 17
+  },
+  "nanxunxiaolianzhuang": {
+   "garden": "南浔小莲庄",
+   "nodes": 42,
+   "with_xy": 42
+  },
+  "qiyuan": {
+   "garden": "启园",
+   "nodes": 76,
+   "with_xy": 75
+  },
+  "wuyuan": {
+   "garden": "寤园",
+   "nodes": 10,
+   "with_xy": 9
+  },
+  "yingyuan": {
+   "garden": "影园",
+   "nodes": 20,
+   "with_xy": 19
+  },
+  "yiyuan": {
+   "garden": "怡园",
+   "nodes": 38,
+   "with_xy": 37
+  },
+  "zhuozhengyuan": {
+   "garden": "拙政园",
+   "nodes": 20,
+   "with_xy": 19
+  },
+  "canglangting": {
+   "garden": "沧浪亭",
+   "nodes": 29,
+   "with_xy": 28
+  },
+  "qingchuzhanyuan": {
+   "garden": "清初瞻园",
+   "nodes": 17,
+   "with_xy": 17
+  },
+  "shizilin": {
+   "garden": "狮子林",
+   "nodes": 41,
+   "with_xy": 40
+  },
+  "changyuan": {
+   "garden": "畅园",
+   "nodes": 45,
+   "with_xy": 45
+  },
+  "liuyuan": {
+   "garden": "留园",
+   "nodes": 55,
+   "with_xy": 55
+  },
+  "zy2.0": {
+   "garden": "瞻园",
+   "nodes": 15,
+   "with_xy": 14
+  },
+  "wsy2.0": {
+   "garden": "网师园",
+   "nodes": 26,
+   "with_xy": 25
+  },
+  "ouyuan": {
+   "garden": "耦园",
+   "nodes": 36,
+   "with_xy": 35
+  },
+  "yp2.0": {
+   "garden": "艺圃",
+   "nodes": 14,
+   "with_xy": 13
+  },
+  "jieziyuan": {
+   "garden": "芥子园",
+   "nodes": 58,
+   "with_xy": 58
+  },
+  "tuisiyuan": {
+   "garden": "退思园",
+   "nodes": 19,
+   "with_xy": 18
+  },
+  "guozhuang": {
+   "garden": "郭庄",
+   "nodes": 37,
+   "with_xy": 37
+  }
+ }
+}

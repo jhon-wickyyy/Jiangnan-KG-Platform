@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>结题展板——江南古典园林知识图谱构建及其应用研究（A0 竖版）</title>
+<style>
+  /* A0 = 841×1189mm，本页 1px = 1mm，输出时 deviceScaleFactor=6 → 约 152dpi */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 841px; height: 1189px; overflow: hidden; }
+  body {
+    font-family: "微软雅黑", "Microsoft YaHei", "黑体", sans-serif;
+    background: #ffffff; color: #231815;
+    padding: 8px 24px 6px 24px;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .sec-title {
+    font-size: 18px; font-weight: bold; color: #231815;
+    border-left: 7px solid #AB8F6A; padding-left: 8px;
+    margin-bottom: 4px; letter-spacing: 1px; line-height: 1.15;
+  }
+  .sec-title .en { font-size: 10px; color: #8a7a63; font-weight: normal; margin-left: 6px; letter-spacing: 0; }
+
+  /* ===== 标题区 ===== */
+  .head { text-align: center; }
+  .head .school { font-size: 12px; letter-spacing: 4px; color: #587558; }
+  .head h1 { font-size: 34px; letter-spacing: 3px; margin: 4px 0 2px; line-height: 1.15; }
+  .head .team { font-size: 13px; color: #4a3a2a; }
+  .head .team b { color: #8a2b2b; }
+  .head .bar { height: 3px; background: linear-gradient(90deg, #AB8F6A, #587558); margin: 5px auto 0; width: 400px; }
+
+  /* ===== 数字条 ===== */
+  .stats { display: flex; gap: 7px; }
+  .stat { flex: 1; background: #231815; color: #fff; text-align: center; padding: 5px 0 4px; }
+  .stat .n { font-size: 24px; font-weight: bold; color: #E9DCC3; line-height: 1.1; }
+  .stat .l { font-size: 10.5px; color: #cfc4ae; margin-top: 1px; }
+
+  /* ===== 简介（单栏） + 背景（三卡） ===== */
+  .intro { position: relative; }
+  .intro p { font-size: 12px; line-height: 1.4; text-align: justify; text-indent: 2em; }
+  .intro .figwrap { float: right; width: 92px; margin: 0 0 4px 10px; text-align: center; }
+  .intro .figwrap img { width: 92px; border: 1px solid #bbb; }
+  .intro .figwrap .cap { font-size: 9.5px; color: #666; margin-top: 1px; }
+  .bg3 { display: flex; gap: 7px; margin-top: 4px; }
+  .bg-item { flex: 1; background: #F5F1EA; border-left: 4px solid #AB8F6A; padding: 3px 7px; }
+  .bg-item b { font-size: 11.5px; }
+  .bg-item p { font-size: 10px; line-height: 1.38; color: #4a3a2a; margin-top: 1px; text-align: justify; }
+
+  /* ===== 三层模型 ===== */
+  .layers { display: flex; gap: 9px; }
+  .layer { flex: 1; border: 1.5px solid #AB8F6A; background: #FBF8F2; padding: 3px 8px; }
+  .layer .t { font-size: 13.5px; font-weight: bold; color: #8a2b2b; line-height: 1.2; }
+  .layer .t span { font-size: 10.5px; color: #8a7a63; font-weight: normal; margin-left: 4px; }
+  .layer .d { font-size: 10px; line-height: 1.35; color: #4a3a2a; margin-top: 2px; }
+  .layer .e { font-size: 9px; color: #587558; margin-top: 2px; line-height: 1.3; }
+
+  /* ===== 案例园对照 ===== */
+  .case-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px; }
+  .case-head .t { font-size: 14px; font-weight: bold; }
+  .case-head .t em { font-style: normal; color: #8a2b2b; }
+  .chips span { display: inline-block; background: #587558; color: #fff; font-size: 10px; padding: 1px 7px; margin-left: 4px; }
+  .compare { display: flex; gap: 9px; justify-content: center; align-items: flex-end; }
+  .cmp { text-align: center; }
+  .cmp img { border: 1px solid #999; background: #fff; }
+  .cmp .cap { font-size: 11px; color: #4a3a2a; margin-top: 2px; }
+  .cmp .cap b { color: #8a2b2b; }
+  .case-note { font-size: 10.5px; color: #4a3a2a; text-align: center; margin-top: 3px; background: #F5F1EA; padding: 2px 10px; line-height: 1.38; }
+  .case-note b { color: #8a2b2b; }
+
+  /* ===== 平台功能 ===== */
+  .grid { display: flex; flex-wrap: wrap; gap: 6px 10px; }
+  .cell { width: calc((100% - 20px) / 3); text-align: center; }
+  .cell img { width: 100%; height: 107px; object-fit: cover; border: 1px solid #aaa; background: #fff; }
+  .cell .cap { font-size: 10px; color: #4a3a2a; margin-top: 2px; line-height: 1.28; }
+  .cell .cap b { color: #8a2b2b; }
+
+  /* ===== 创新点 ===== */
+  .inno { display: flex; gap: 7px; }
+  .inno .c { flex: 1; background: #F5F1EA; padding: 3px 6px; border-top: 3px solid #AB8F6A; }
+  .inno .c.hl { border-top: 3px solid #8a2b2b; background: #F3EAE3; }
+  .inno .n { font-size: 14px; font-weight: bold; color: #AB8F6A; line-height: 1.1; }
+  .inno .hl .n { color: #8a2b2b; }
+  .inno .t { font-size: 11.5px; font-weight: bold; margin: 1px 0 1px; }
+  .inno .d { font-size: 9.5px; line-height: 1.38; color: #4a3a2a; text-align: justify; }
+
+  /* ===== 成果与展望 ===== */
+  .ach ul { list-style: none; }
+  .ach li { font-size: 10.5px; line-height: 1.4; margin-bottom: 2px; padding-left: 12px; position: relative; text-align: justify; }
+  .ach li::before { content: "▎"; position: absolute; left: 0; color: #AB8F6A; }
+  .ach li b { color: #8a2b2b; }
+  .row2 { display: flex; gap: 12px; }
+  .col { flex: 1; }
+
+  /* ===== 底条 ===== */
+  .foot {
+    margin-top: auto; text-align: center; font-size: 10px; color: #6a5a44;
+    border-top: 2px solid #AB8F6A; padding-top: 3px; line-height: 1.35;
+  }
+</style>
+</head>
+<body>
+
+<!-- 标题区 -->
+<div class="head">
+  <div class="school">项目编号：202601018 · 东南大学 · 大学生创新创业训练计划（SRTP）结题展板</div>
+  <h1>江南古典园林知识图谱构建及其应用研究</h1>
+  <div class="team">负责人：<b>杨思成</b>　成员：<b>余悦、王梓萌</b>　指导教师：<b>邵星宇、王笑</b>（东南大学建筑学院）</div>
+  <div class="bar"></div>
+</div>
+
+<!-- 数字条 -->
+<div class="stats">
+  <div class="stat"><div class="n">23 园</div><div class="l">覆盖苏州·扬州·南京等 8 市</div></div>
+  <div class="stat"><div class="n">718</div><div class="l">园林要素（建筑·池沼·花木·山石）</div></div>
+  <div class="stat"><div class="n">1905</div><div class="l">空间与语义关系</div></div>
+  <div class="stat"><div class="n">19 园</div><div class="l">坐标信息基本完整</div></div>
+  <div class="stat"><div class="n">9 园</div><div class="l">具备闭环游览动线</div></div>
+</div>
+
+<!-- 简介与背景 -->
+<div>
+  <div class="sec-title">项目简介与背景<span class="en">BACKGROUND</span></div>
+  <div class="intro">
+    <div class="figwrap">
+      <img src="ppt_assets_v4/photo_survey_changyuan.jpg" alt="测绘工作照">
+      <div class="cap">畅园测绘工作照</div>
+    </div>
+    <p>本项目面向江南古典园林数字化保护与研究的现实需求，以苏州畅园为主要实测案例，构建了覆盖 23 个江南古典园林的空间知识图谱数据库，并开发可视化平台，实现园林知识的浏览与检索、空间布局还原、游览动线复原、空间关系分析与路径查询。平台渲染的平面图与测绘原图一一对应，为园林遗产数字化建档与 AI 复原研究提供结构化知识底座。</p>
+  </div>
+  <div class="bg3">
+    <div class="bg-item"><b>① 遗产信息流失分散</b><p>许多名园已消失或改建（如乐郊园、影园仅存文献图绘），现存园林缺乏整合现状与历史的动态数字档案。</p></div>
+    <div class="bg-item"><b>② 表格表达不了空间关联</b><p>表格只能回答"园里有什么"，记不下"留云山房可看水香榭、相距 9.5 米"这类带方位、距离的关系。</p></div>
+    <div class="bg-item"><b>③ 知识图谱提供新范式</b><p>以"要素—关系—属性"组织园林知识，叠加真实测绘坐标，还原空间格局与游园序列。</p></div>
+  </div>
+</div>
+
+<!-- 三层模型 -->
+<div>
+  <div class="sec-title">空间语义三层模型<span class="en">SPATIAL-SEMANTIC MODEL</span></div>
+  <div class="layers">
+    <div class="layer">
+      <div class="t">位置层<span>在哪里</span></div>
+      <div class="d">每一处要素带米制平面坐标与极坐标，以园门为原点建立坐标系。</div>
+      <div class="e">例：畅园留云山房（10.4，28.2），外户门（0，0）</div>
+    </div>
+    <div class="layer">
+      <div class="t">关系层<span>怎么联系</span></div>
+      <div class="d">相邻（可看·对景·建筑环线）、相接（临水·在山上），逐条记录方位、距离与中介（园路·水面·山径）。</div>
+      <div class="e">例：留云山房——可看——水香榭，9.5 米</div>
+    </div>
+    <div class="layer">
+      <div class="t">游线层<span>怎么游览</span></div>
+      <div class="d">以环线序号记录游览动线，平台自动复原闭环游园路线。</div>
+      <div class="e">例：沧浪亭 14 站闭环 487.7 米；狮子林 28 站 770.8 米</div>
+    </div>
+  </div>
+</div>
+
+<!-- 案例园对照 -->
+<div>
+  <div class="sec-title">案例园 · 苏州畅园<span class="en">CASE STUDY: CHANGYUAN</span></div>
+  <div class="case-head">
+    <div class="t"><em>平台平面图不是示意图</em>——测绘原图与平台渲染 1:1 对照</div>
+    <div class="chips">
+      <span>45 要素</span><span>130 关系</span><span>相邻 86</span><span>相接 44</span><span>坐标全覆盖</span>
+    </div>
+  </div>
+  <div class="compare">
+    <div class="cmp">
+      <img src="ppt_assets_v4/cad_changyuan_full.png" style="height:112px;width:153px;object-fit:contain;" alt="畅园测绘平面图">
+      <div class="cap"><b>测绘平面图</b>（外户门为原点）</div>
+    </div>
+    <div class="cmp">
+      <img src="ppt_screenshots/cy-07-spatial-layout.png" style="height:112px;width:205px;object-fit:contain;" alt="平台空间布局">
+      <div class="cap"><b>平台按坐标还原</b>（空间布局模式）</div>
+    </div>
+  </div>
+  <div class="case-note">对照验证：外户门、留云山房、桐华书屋、水香榭、东曲廊、中部水面——<b>位置一一对应</b>。折廊拆为 4 段、水面拆为 4 段逐段记录，建筑—廊道相接 32 条、曲桥涉水 4 条、水面段间相接 8 条。</div>
+</div>
+
+<!-- 平台功能 -->
+<div>
+  <div class="sec-title">平台功能<span class="en">PLATFORM FEATURES · 8 个页面 13 项查询全部实测通过</span></div>
+  <div class="grid">
+    <div class="cell">
+      <img src="ppt_screenshots/cy-12b-entities.png" alt="实体浏览">
+      <div class="cap"><b>实体浏览</b>：要素按类别检索，形制属性齐全</div>
+    </div>
+    <div class="cell">
+      <img src="ppt_screenshots/cy-08-relation-network.png" alt="图谱探索">
+      <div class="cap"><b>图谱探索</b>：知识关系与空间布局双模式</div>
+    </div>
+    <div class="cell">
+      <img src="ppt_screenshots/cy-10-spatial-filtered.png" alt="空间关系分析">
+      <div class="cap"><b>空间关系分析</b>：86 条相邻关系叠加平面图</div>
+    </div>
+    <div class="cell">
+      <img src="ppt_screenshots/09-route-playing.png" alt="游线复原">
+      <div class="cap"><b>游线复原</b>：沧浪亭 14 站闭环 487.7 米逐步动画</div>
+    </div>
+    <div class="cell">
+      <img src="ppt_screenshots/12-path-spatial.png" alt="路径查询">
+      <div class="cap"><b>路径查询</b>：假山 → 面水轩 3 段 96.7 米</div>
+    </div>
+    <div class="cell">
+      <img src="ppt_screenshots/cy-08b-network-analysis.png" alt="网络分析">
+      <div class="cap"><b>网络分析</b>：核心要素为留云山房、涤我尘襟</div>
+    </div>
+  </div>
+</div>
+
+<!-- 创新点 -->
+<div>
+  <div class="sec-title">项目创新点<span class="en">INNOVATIONS</span></div>
+  <div class="inno">
+    <div class="c">
+      <div class="n">01</div>
+      <div class="t">园林知识的图谱化储存</div>
+      <div class="d">以"要素—关系—属性"图谱替代表格记录，园林知识可检索、可计算、可追溯。</div>
+    </div>
+    <div class="c">
+      <div class="n">02</div>
+      <div class="t">空间语义三层模型</div>
+      <div class="d">位置·关系·游线三层叠加，还原空间格局与游园体验。</div>
+    </div>
+    <div class="c hl">
+      <div class="n">03</div>
+      <div class="t">复杂要素的拆解式表达</div>
+      <div class="d">折廊、水面先拆为逐段小要素，再从小要素视角记录关系——表格无法企及的细粒度。</div>
+    </div>
+    <div class="c">
+      <div class="n">04</div>
+      <div class="t">全动态多园适配</div>
+      <div class="d">23 园结构各异零改动接入，缺数据自动降级，知识库可持续扩充。</div>
+    </div>
+  </div>
+</div>
+
+<!-- 成果与展望 -->
+<div>
+  <div class="sec-title">成果与展望<span class="en">OUTCOMES &amp; PROSPECTS</span></div>
+  <div class="row2 ach">
+    <div class="col">
+      <ul>
+        <li><b>建成 23 园空间知识图谱数据库</b>（718 要素、1905 关系，覆盖 8 市，含乐郊园、影园等消失之园的抢救性建档）；</li>
+        <li><b>完成 8 页面 13 项查询的可视化平台</b>，全部实测通过，只读设计不修改原始测绘资料；</li>
+        <li><b>形成空间语义建模方法</b>（三层模型与拆解式表达），可供同类遗产建档借鉴。</li>
+      </ul>
+    </div>
+    <div class="col">
+      <ul>
+        <li><b>补齐数据</b>：14 个园仅有隶属关系，继续完善空间关系与游线数据；</li>
+        <li><b>智能问答</b>：结合大语言模型实现园林知识的自然语言查询；</li>
+        <li><b>多模态与开放服务</b>：融合文献、图像、测绘资料，迁移学院服务器开放访问，支撑省基金课题 AI 复原研究。</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 底条 -->
+<div class="foot">本项目依托江苏省自然科学基金课题《人工智能辅助的江南古典园林"文/画/图"复原方法研究》（BK20241351）｜东南大学建筑学院｜2026 年 10 月</div>
+
+</body>
+</html>
